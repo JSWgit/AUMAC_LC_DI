@@ -49,14 +49,11 @@ def main():
     rho1=tor.cat([tor.tensor([1e-9],device=my_device),rho1])
     alp=0.2
     n=tor.tensor(38400)
-    # ka_range=tor.arange(20,301,20)
-    # ka_range=tor.cat([tor.tensor([1]),tor.tensor([10]),ka_range]).to(my_device)
     ka_range=tor.tensor([20])
     snr_range=tor.arange(-21.4,-10,1e-2, device=my_device)
     dm=alp*n
     rho_range=tor.arange(1e-2,1+1e-2,1e-2, device=my_device)
     rho_range=tor.cat([tor.tensor([1e-9],device=my_device),rho_range])
-    # rho_range=tor.tensor([1])
     err_record=tor.zeros(len(ka_range), len(snr_range),device=my_device)
     start=0
     start_temp=0
@@ -97,4 +94,5 @@ def main():
 if __name__ == "__main__":
     main()
     
+
 
