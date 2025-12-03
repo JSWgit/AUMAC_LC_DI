@@ -29,4 +29,6 @@ This repository provides code to evaluate random-coding bounds on the per-user p
 
 **Note**: The Eb/N0 of the CCS-AMP-BP scheme for the UMAC is copied from [6], and hence not included in this repository. 
 
+**Note**: The above files do not evaluate the probability of message collisions or power-constraint violations. The probability of message collisions can be approximated by \frac{K_a (K_a - 1)}{2M}. The probability of power-constraint violations can be derived using the cumulative distribution function (CDF) of the chi-square distribution.
+
 **Version**: The simulations are performed with Python 3.13.4 and pytorch 2.7.1.
